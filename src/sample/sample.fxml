@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="believe" layoutX="463.0" layoutY="46.0" mnemonicParsing="false" onAction="#SteamGame" text="공식사이트 배포" />
+      <Button fx:id="nowfreebutton" layoutX="609.0" layoutY="46.0" mnemonicParsing="false" onAction="#NowGame" text="현재 배포중" />
+      <Button id="allcheck" fx:id="allcheck" layoutX="305.0" layoutY="46.0" mnemonicParsing="false" onAction="#AllFreeGame" text="무료 게임 전체확인" />
+      <Text layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="채고의 게임정보" textAlignment="CENTER" wrappingWidth="312.4234619140625">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <TableView fx:id="Game" layoutX="39.0" layoutY="79.0" onMouseClicked="#Double" prefHeight="355.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="GameTitle" prefWidth="531.2000007629395" text="게임 이름" />
+          <TableColumn fx:id="GameTime" prefWidth="119.20001220703125" text="배포 기간" />
+        </columns>
+      </TableView>
+      <Button fx:id="bundlegamebutton" layoutX="548.0" layoutY="10.0" mnemonicParsing="false" onAction="#BundleGameCheck" text="번들게임 목록" />
+      <Button fx:id="salegamebutton" layoutX="348.0" layoutY="10.0" mnemonicParsing="false" onAction="#SaleGameCheck" text="세일 게임 목록 (스팀 제외)" />
+   </children>
+</AnchorPane>
